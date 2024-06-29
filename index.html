@@ -7,6 +7,7 @@
     <title>Show the code, don't just ask</title>
     <meta name="description" content="Don't expect me to magically fix it; show your code so I can actually help." />
     <meta name="author" content="Andrew Knackstedt" />
+    <link rel="icon" type="image/x-icon" href="src/assets/logo.svg">
     <link rel="base" href="https://showthecode.dev/" />
     <link rel="canonical" href="https://showthecode.dev/" />
     <!-- <meta rel="sitemap" type="application/xml" content="https://showthecode.dev/sitemap.xml" /> -->
@@ -73,7 +74,7 @@
             Imagine calling a mechanic, saying "My car doesn't start" and refusing the let them see your car.
         </p>
         <p>
-            
+
         </p>
 
         <div class="columns">
@@ -95,13 +96,15 @@
                     </p>
                 </blockquote>
                 <p class="comment">
-                    Yes, use Internet Explorer. Now that your silly CORS issue is gone you can focus on the bigger issue -- removing jQuery.
+                    Yes, use Internet Explorer. Now that your silly CORS issue is gone you 
+                    can focus on the bigger issue -- removing jQuery.
                 </p>
 
                 <blockquote>
                     <span class="user">ToasterGallions:</span>
                     <p class="message">
-                        i can create a mern stack e commrce website but one error irritate me last 4 hours i can't solve it please help
+                        i can create a mern stack e commrce website but one error irritate 
+                        me last 4 hours i can't solve it please help
                     </p>
                 </blockquote>
                 <p class="comment">
@@ -127,22 +130,25 @@
                     when you need assistance, don't just drop a vague "it's broken" bomb and expect us to fix it magically. Show us the darn
                     code! We're not here to play 20 Questions; we're here to debug.
                 </p>
-                
-                <p>
-                    It's not a scavenger hunt; we don't have time to go searching for clues in your vague
-                    descriptions. You know what helps? The code! Copy, paste, and <em>format it</em> nicely — none of that "I'm too lazy to indent"
-                    nonsense. Give us the whole picture: the variables, the loops, the functions — everything in the blast zone. And please,
-                    don't insult us with screenshots of your IDE like it's modern art; we need text we can search and scrutinize.
-                </p>
         
                 <p>
                     Here’s the revolutionary idea: before you hit that panic button, take a deep breath and show us your code. Break it down
-                    step-by-step. Describe what's happening versus what you <em>expected</em> to happen. Think of it as a narrative of your code's
-                    epic fail. Trust me, it's not giving away state secrets; it’s saving everyone's sanity. So, <b>be a hero</b> — show us your code,
-                    and we might just rescue you from programming <span style="color: #c2485b">purgatory</span>.
+                    step-by-step. Describe what's happening versus what you expected to happen. Think of it as a narrative of your code's
+                    epic fail. Trust me, it's not giving away state secrets; it’s saving everyone's sanity. So, be a hero — show us your code,
+                    and we might just rescue you from programming purgatory.
+                </p>
+
+                <p>
+                    It's not a scavenger hunt; we don't have time to go searching for clues in your vague
+                    descriptions. You know what helps? The code! Copy, paste, and <b>format it</b> nicely — none of that "I'm too lazy to indent"
+                    nonsense. Give us the whole picture: the variables, the loops, the functions — everything in the blast zone. And
+                    please, don't insult us with screenshots of your IDE like it's modern art; we need text we can search and scrutinize.
                 </p>
             </div>
         </div>
+
+        <h2>How to share your code online.</h2>
+        <ul id="links"></ul>
 
         <p>
             Other similar problems: <a href="https://xyproblem.info/">The XY Problem</a>, <a href="https://nohello.net/">No
@@ -153,6 +159,20 @@
                 Smart Way</a>.
         </p>
     </main>
+    <script type="module">
+        import { links } from "./src/main";
+        window.addEventListener("load", () => {
+            const linkContainer = document.getElementById('links');
+            links.forEach(link => {
+                const li = document.createElement("li");
+                li.classList.add("playground-link");
+
+                li.innerHTML = `<a href="${link.url}">${link.label}</a>`;
+
+                linkContainer.append(li);
+            });
+        })
+    </script>
 </body>
 </html>
 

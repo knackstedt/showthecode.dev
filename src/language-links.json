@@ -1,0 +1,26 @@
+{
+    "general": [
+        {
+            "url": "https://stackblitz.com/",
+            "label": "StackBlitz"
+        },
+        {
+            "url": "https://playcode.io/new",
+            "label": "PlayCode"
+        },
+        {
+            "url": "https://codepen.io/",
+            "label": "CodePen"
+        },
+        {
+            "url": "https://github.com/",
+            "label": "GitHub"
+        }
+    ],
+    "ts": [
+        {
+            "url": "https://www.typescriptlang.org/play/",
+            "label": "TypeScript Playground"
+        }
+    ]
+}

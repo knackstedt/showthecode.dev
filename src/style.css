@@ -45,10 +45,23 @@ blockquote::before {
 }
 
 .github {
-    position: fixed;
+    position: absolute;
     top: 8px;
     right: 8px;
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+
+@media (width < 600px) {
+    blockquote {
+        margin: 12px 8px;
+    }
+    .comment {
+        margin: 0 8px;
+    }
+    .message {
+        margin-bottom: 0;
+    }
 }
