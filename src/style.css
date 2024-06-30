@@ -1,4 +1,7 @@
 html {
+    color: #121212;
+    background-color: #efefef;
+
     color-scheme: light dark;
 }
 
@@ -14,8 +17,8 @@ main {
 }
 
 blockquote {
-    background-color: #333;
-    color: #efefef;
+    background-color: #e0e0e0;
+    color: #222;
     position: relative;
     padding-left: 12px;
     border-top-right-radius: 4px;
@@ -31,7 +34,7 @@ blockquote::before {
     width: 4px;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
-    background-color: aquamarine;
+    background-color: rgb(0, 255, 85);
 }
 
 .comment {
@@ -63,5 +66,19 @@ blockquote::before {
     }
     .message {
         margin-bottom: 0;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        color: #efefef;
+        background-color: #121314;
+    }
+    blockquote {
+        background-color: #333;
+        color: #efefef;
+    }
+    blockquote::before {
+        background-color: aquamarine;
     }
 }
